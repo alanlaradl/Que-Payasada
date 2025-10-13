@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que Payasada</title> 
+    <link rel = "icon" href = "img/quepayasadaLOGOAZUL-02.png">   <!-- ICONO VA AQUI -->
+</head>
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+body{
+  background-color: #fff2d4;
+}
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+  @font-face {
+    font-family: "Genty";
+    src: url(Fonts/Genty-Regular.ttf);
+  }
+    header {   
+      width: 100%;
+      height: 100%;
+        padding-top: 900px;
+        background-image: url(img/Portada.png); 
+        background-size:cover;
+        background-position: center;
+        background-color: rgb(49, 47, 47);
+        margin-bottom: 0px;
+        margin-top: 80px;
+    }
+     .ICONO{ /* ICONO CHIKITO QUE APARECE EN EL MENU */
+      
+       img{
+        z-index: 2000;
+        position: fixed;
+        height: auto;
+        width: 65px;
+        left: 15px;
+        top: 10px;
+          transition: 0.2s;
+
+       }
+        img:hover{
+           transform: scale(1.2); 
+          transition: transform 0.1s ease-in-out;
+        }
+      }
+    .sobrenosotros{
+       font-family: "Cal Sans", sans-serif;
+       font-weight: 400;
+      font-style: normal;
+      margin-top: 70px;
+      margin-left: 125px;
+      height: 300px;
+      width: 700px;
+      z-index: 1500;
+      text-align: left;
+      padding: 30px;
+      h1{
+        color: #0091fa;
+        font-size: 50px;
+        opacity: 100%;
+      }
+      p{
+        font-size: 20px;
+        opacity: 100%;
+      }
+    }
+    .menu{
+            padding: 20px;
+            padding-left: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            overflow: hidden;
+            background-color: #ff6e8d;
+            text-align: center;
+            z-index: 1400;
+ 
+            a{
+                color: white;
+                text-decoration: none;
+                  font-family: "Cal Sans", sans-serif;
+                  font-weight: 400;
+                  font-style: normal;
+                font-size: 20px;
+                padding: 8px 16px;
+                border: 2px solid white;
+                border-radius: 8px;
+                transition: background-color .18s, color .18s, transform .12s;
+            }
+            a:hover {
+                background-color: white;
+                color: black;
+                transform: translateY(-5px);
+            }
+        }
+         /* ===== EL FOKIN PRIMER CARRUCEL DE UNO OK?===== */
+    .carrusel1 {
+      position: relative;
+      width:100%;
+      height: 500px;
+      overflow: hidden;
+      margin-top: 60px
+    }
+
+    .carrusel1 .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 2s ease-in-out;
+    }
+
+    .carrusel1 .slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .carrusel1 .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .carrusel1 .flecha {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 10;
+      background-color: transparent;
+    }
+
+    .carrusel1 .prev { left: 10px; }
+    .carrusel1 .next { right: 10px; }
+   
+   /* mi bebe con cositas lindas */
+   .imgtienda{
+    
+  margin-left: 30%;
+  width: 40%;
+  height:50% ;
+}
+.PayaShop{
+  height: 60%;
+  width: 100%;
+  margin-top: 70px;
+ 
+   
+}
+   .f1{
+  background-image: url(img/fondo.png) ;
+  background-size: 1100px 700px;
+  background-repeat: no-repeat;
+  height:500px ;
+  width:100%;
+  background-position: 50%;
+  
+}
+.carrusel2-bebe {
+  width: calc(270px * 3 + 40px); /* 3 tarjetas + 2 gaps */
+  margin:40px auto;
+  overflow: hidden;
+  position: relative;
+ align-items: center;
+ justify-content: center;     /* centra horizontalmente */
+  align-items: center;         /* centra verticalmente */
+   padding-top: 70px;
+    
+}
+
+.carrusel2-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.45s ease-in-out;
+ z-index: 2000;
+
+}
+
+.carrusel2-container .tarjeta {
+  width: 270px;
+  height: 337.5px;
+  background-color: #ffffff; /* fondo visible uwu */
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flecha2 {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  z-index: 10;
+  border-radius: 10%;
+  background-color: rgb(255, 255, 255);
+border-radius: 50%;
+  
+}
+.imgsp{
+  height: 337.5px;
+  width:270px ;
+  transition: 0.2s;
+}
+.imgsp:hover{
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+
+
+
+/* Flechas ahora sobre las tarjetas dentro del contenedor */
+.carrusel2-bebe .antes2 { margin-left: 5px;
+ }
+.carrusel2-bebe .siguente2 { right: 5px; }
+
+/* Cursos */
+
+.cursos{
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  img{
+    transition: 0.2s;
+  }
+  img:hover{
+      transform: scale(1.2) rotate(-3deg); 
+      transition: transform 0.1s ease-in-out;
+  }
+} 
+.BC{
+  padding-right: 100px;
+  padding-top: 50px;
+  height: 40%;
+  width:40% ;
+  float: left;
+}
+.texto{
+  margin-top: -300px;
+  h1{
+    color: #1ac44f;
+    font-size: 50px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
+/* Aqui van las cajitas para poner texto */
+.informacion {
+  align-items: center;
+  display: inline;
+  column-gap: 15px;
+  margin-top: 300px;
+  border: none;
+  p{
+    margin-left: -425px;
+  }
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    height: 20px;
+    width: 300px;
+    margin-left: -425px;
+  }
+}
+.equipo{
+   font-family: "Cal Sans", sans-serif;
+       font-weight: 400;
+      font-style: normal;
+    h1{
+        justify-content: center;
+        text-align: center;
+        font-size: 60px;
+        color: #ff6e8d;
+      }
+  }
+  
+  .fotitos img{ /* AQUI VA TODO SOBRE LAS FOTOS DE PAYASITOS, ES UN MONTON */
+        border-radius: 30px;
+        width: 400px;
+        padding-left: 20px;
+        height: auto;
+  } 
+  .fotitos p{
+     font-family: "Cal Sans", sans-serif;
+       font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      font-size: 30px;
+      padding-top: -50px;
+  }
+    .mirka{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+
+    }
+    .mirka .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .mirka:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .armando{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .armando .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .armando:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .bere{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .bere .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .bere:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .alan{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .alan .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .alan:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .paulina{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .paulina .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .paulina:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .sandra{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .sandra .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .sandra:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .grecia{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .grecia .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .grecia:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out; 
+    }
+footer {
+  background-color: #ff6e8d;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Cal Sans", sans-serif;
+  margin-top: 50px ;
+}
+
+/* Casita de la parte izquierda (logos + redes) */
+.footer-izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;      /* gap = espacio entre los hijos del contenedor, es como un margin pero mas cool  */
+}
+
+/* Sección de los logos */
+.footer-logos {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+     flex-direction: column; 
+    transition: 0.2s;
+
+}
+
+.footer-logos img {
+  display: block;
+  width:20% ;
+  height:20% ;
+  padding-left: 150px;  
+}
+.footer-logos:hover {
+  transform: translateY(-15px);
+  transition: transform 0.1s ease-in-out;
+  
+}
+
+/* Redes sociales (una debajo de otra) */
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -50px;
+  padding-top: -300px;
+}
+
+.footer-redes a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-redes a:hover { /* a de cuenta que si le pasas el puntero las letras cambian de color , aqui lepuedes mover */
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.footer-redes img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Texto de derechos reservados */
+.footer-derecha {
+  align-self: flex-end;
+  font-size: 14px;
+  color: #333;
+}
+
+</style>
+<body>
+<a><div id="HEADER"></div></a>
+    <header> 
+    </header>
+    <div class="menu"> <!-- MENU VA AQUI -->
+        <a href="#HEADER"> INICIO</a>
+        <a href="#SOBRENOSOTROS"> SOBRE NOSOTROS</a>
+        <a href="#EVENTOS">EVENTOS</a>
+        <a href="#TIENDITA"> PAYASHOP</a>
+        <a href="#CURSOS"> CURSOS </a> 
+        <a href="#TEAM"> NUESTRO EQUIPO </a>
+    </div>
+    <section>
+      <a id="SOBRENOSOTROS"></a>
+        <div class="sobrenosotros">
+          <h1> SOBRE NOSOTROS ☆</h1>
+          <p> ¡Somos un grupo de payasos que anima tu fiesta! 
+¿Te interesa unirte? ¡Asiste a nuestros cursos!
+¡También vendemos artículos animados!</p>
+
+        </div>
+    </section>
+   <div onclick="document.getElementById('player').play()" id="ICONO" class="ICONO"> <!-- COSA MARAVILLOSA QUE REPRODUCE AUDIO -->
+      <img src="img/quepayasadaLOGOAMARILLO-02.png">
+      <audio id="player" src="img/BOCINA.mp3">
+		</audio>
+    </div>
+    
+  
+    <div id="EVENTOS" class="carrusel1" id="carrusel1">
+    <div class="slides">
+      <div class="slide"><img src="img/b1.jpg" alt=""></div>
+      <div class="slide"><img src="img/b2.jpg" alt=""></div>
+      <div class="slide"><img src="img/b3.jpg" alt=""></div>
+    </div>
+    <button class="flecha prev" onclick="moverSlide(-1)">❮</button>
+    <button class="flecha next" onclick="moverSlide(1)">❯</button>
+  </div>
+  <!-- ===== mi bebe  ===== -->
+
+<div id= "TIENDITA" class="PayaShop"> <img class="imgtienda" src="img/Payashop.png" alt=""></div>
+<section class="f1">
+ 
+<div class="carrusel2-bebe">
+   <button class="flecha2 antes2" onclick="moverCarrusel2(-1)">❮</button>  
+ 
+  <div class="carrusel2-container" id="carrusel2">
+    <div class="tarjeta"><img class="imgsp" src="img/p1.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p2.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p3.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p4.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p5.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p6.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p7.png" alt=""></div>
+    
+  </div>
+
+
+  <button class="flecha2 siguente2" onclick="moverCarrusel2(1)">❯</button>
+</div>
+</section>
+<div class="PayaShop"> <img class="imgtienda" src="img/Payashop abajo.png" alt=""></div>
+
+<div id="CURSOS" class="cursos">
+  <img class="BC"  src="img/banner cursos.png" >
+<div class="texto">
+  <h1> CURSO DE CLOWN! </h1>
+  <p> 4 Sesiones, inicia sábado 11 de Octubre </p>
+  <p> Dirigido a jóvenes y adultos por igual! </p>
+  <p> Horario: 11:00AM a 12:30PM </p>
+  <h2> Formulario de Inscripción ↓ </h2>
+  <br> </br>
+</div>
+<div class="informacion">
+  <form>
+    <p> NOMBRE </p>
+    <input type="text">
+  </form>
+   <form>
+    <p> NOMBRE DE PAYASO </p>
+    <input type="text">
+  </form>
+   <form>
+    <p> NUMERO DE PAYASO </p>
+    <input type="text">
+  </form>
+  </div>
+</div>
+<a id="TEAM"> </a>
+  <section  class="equipo">
+    <h1> CONOCE A NUESTRO EQUIPO! </h1>
+    </section>
+    <div class="fotitos">
+      <div class="mirka">
+        <img src="img/mirka3.jpg">
+        <img src="img/mirka2.png" class="top">
+        <p> MIRKA </p>
+      </div>
+      <div class="armando">
+        <img src="img/armando3.jpg">
+        <img src="img/armando2.png" class="top">
+        <p> ARMANDO </p>
+      </div>
+      <div class="bere">
+        <img src="img/bere3.jpg">
+        <img src="img/bere2.png" class="top">
+        <p> BERE </p>
+      </div>
+      <div class="alan">
+        <img src="img/alan3.jpg">
+        <img src="img/alan2.png" class="top">
+        <p> ALAN </p>
+      </div>
+      <div class="paulina">
+        <img src="img/paulina3.jpg">
+        <img src="img/paulina2.png" class="top">
+        <p> PAULINA </p>
+      </div>
+      <div class="sandra">
+        <img src="img/sandra3.jpg">
+        <img src="img/sandra2.png" class="top">
+        <p> SANDRA </p>
+      </div>
+      <div class="grecia">
+        <img src="img/grecia3.jpg">
+        <img src="img/grecia2.png" class="top">
+        <p> GRECIA </p>
+      </div>
+
+    </div>
+
+   <footer>
+  <div class="footer-izquierda">
+    <div class="footer-logos"> 
+     <img src="img/icon4-02.png" >
+     <img src="img/logoletra.png"> 
+    
+     
+    </div>
+
+    <div class="footer-redes">
+      <a href="#"><img src="img/icon2-01.png" > WhatsApp</a>
+      <a href="#"><img src="img/icon3-01.png" > Facebook</a>
+      <a href="#"><img src="img/icon1-01.png" > Instagram</a>
+    </div>
+  </div>
+
+  <div class="footer-derecha">
+    © 2025 Que Payasada. Todos los derechos reservados.
+  </div>
+</footer>
+
+     <script>
+    // --- scrip no le entiendo ,pero si le entiendo tu sabes ---
+    let index1 = 0;
+    const slides = document.querySelector(".carrusel1 .slides");
+    const totalSlides = document.querySelectorAll(".carrusel1 .slide").length;
+
+    function moverSlide(n) {
+      index1 = (index1 + n + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${index1 * 100}%)`;
+    }
+
+    setInterval(() => moverSlide(1), 3000);
+     // --- Carrusel 2 ---
+  let index2 = 0;
+  const carrusel2 = document.getElementById("carrusel2");
+  const tarjetas2 = carrusel2.querySelectorAll(".tarjeta");
+  const visible = 3;
+  const total2 = tarjetas2.length;
+  const gap = 20; // mismo que en el style
+
+  function moverCarrusel2(n) {
+    const maxIndex = total2 - visible;
+    index2 = Math.max(0, Math.min(index2 + n, maxIndex));
+    carrusel2.style.transform = `translateX(-${index2 * (270 + gap)}px)`;
+  }
+    </script>
+    
+</body>
+</html>
