@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que Payasada - PayaShop</title> 
+    <link rel = "icon" href = "img/favicon.png">   <!-- ICONO VA AQUI -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="menu"> <!-- MENU VA AQUI -->
+        <a href="#HEADER"> INICIO</a>
+        <a href="index.html"> PAGINA PRINCIPAL</a>
+        <a href="#SOBRENOSOTROS"> SOBRE NOSOTROS</a>
+        <a href="pagina2.html"> PAYASHOP</a>
+        <a href="pagina3.html"> CURSOS </a> 
+        <a href="pagina4.html"> IDENTIDAD</a>
+        <a href="#TEAM"> NUESTRO EQUIPO </a>
+    </div>
+    
+  <!-- ===== mi bebe  ===== -->
+
+<div id= "TIENDITA" class="PayaShop"> <img class="imgtienda" src="img/Payashop.png" alt=""></div>
+<section class="f1">
+ 
+<div class="carrusel2-bebe">
+   <button class="flecha2 antes2" onclick="moverCarrusel2(-1)">❮</button>  
+ 
+  <div class="carrusel2-container" id="carrusel2">
+    <div class="tarjeta"><img class="imgsp" src="img/p1.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p2.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p3.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p4.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p5.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p6.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/p7.png" alt=""></div>
+    
+  </div>
+
+
+  <button class="flecha2 siguente2" onclick="moverCarrusel2(1)">❯</button>
+</div>
+</section>
+<div class="PayaShop"> <img class="imgtienda" src="img/Payashop abajo.png" alt=""></div>
+
+
+
+   <footer>
+  <div class="footer-izquierda">
+    <div class="footer-logos"> 
+     <img src="img/icon4-02.png" >
+     <img src="img/logoletra.png"> 
+    
+     
+    </div>
+
+    <div class="footer-redes">
+      <a href="#"><img src="img/icon2-01.png" > WhatsApp</a>
+      <a href="#"><img src="img/icon3-01.png" > Facebook</a>
+      <a href="#"><img src="img/icon1-01.png" > Instagram</a>
+    </div>
+  </div>
+
+  <div class="footer-derecha">
+    © 2025 Que Payasada. Todos los derechos reservados.
+  </div>
+</footer>
+
+   <script>
+     // --- Carrusel 2 ---
+  let index2 = 0;
+  const carrusel2 = document.getElementById("carrusel2");
+  const tarjetas2 = carrusel2.querySelectorAll(".tarjeta");
+  const visible = 3;
+  const total2 = tarjetas2.length;
+  const gap = 20; // mismo que en el style
+
+  function moverCarrusel2(n) {
+    const maxIndex = total2 - visible;
+    index2 = Math.max(0, Math.min(index2 + n, maxIndex));
+    carrusel2.style.transform = `translateX(-${index2 * (270 + gap)}px)`;
+  }
+    </script>
+    
+</body>
+</html>

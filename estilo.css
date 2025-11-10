@@ -1,0 +1,535 @@
+
+  html{
+    scroll-behavior: smooth;
+  }
+body{
+  background-color: #fff2d4;
+}
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+  @font-face {
+    font-family: "Genty";
+    src: url(Fonts/Genty-Regular.ttf);
+  }
+    header {   
+      width: 100%;
+      height: 100%;
+        padding-top: 45%;
+        background-image: url(img/Portada.png); 
+        background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+        margin-bottom: 0px;
+        margin-top: 80px;
+    }
+     .ICONO{ /* ICONO CHIKITO QUE APARECE EN EL MENU */ 
+          cursor: pointer;
+          display: inline-block;
+       img{
+        z-index: 2000;
+        position: fixed;
+        height: auto;
+        width: 65px;
+        left: 15px;
+        top: 10px;
+          transition: 0.2s;
+
+       }
+        img:hover{
+           transform: scale(1.2); 
+          transition: transform 0.1s ease-in-out;
+        }
+      }
+      #confettiGif {
+          position: fixed; /* Cubre toda la pantalla */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Ajusta el GIF al contenedor */
+          z-index: 2100; /* Asegura que el GIF esté sobre otros elementos */
+          display: none; /* Oculta el GIF por defecto */
+          }
+    .sobrenosotros{
+       font-family: "Cal Sans", sans-serif;
+       font-weight: 400;
+      font-style: normal;
+      margin-top: 70px;
+      margin-left: 300px;
+      height: 300px;
+      width: 700px;
+      z-index: 1500;
+      text-align: left;
+      padding: 30px;
+      h1{
+        color: #0091fa;
+        font-size: 50px;
+        opacity: 100%;
+      }
+      p{
+        font-size: 20px;
+        opacity: 100%;
+      }
+      img{
+        position: static;
+        margin-top: -25vh;
+        margin-left: 95vh;
+        width: 40%;
+        transition: 1s;
+      }
+      img:hover{
+        transform: rotate(360deg); 
+        transition: transform 1s ease-in-out;
+      }
+    }
+    .menu{
+            padding: 20px;
+            padding-left: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            overflow: hidden;
+            background-color: #ff6e8d;
+            text-align: center;
+            z-index: 1400;
+ 
+            a{
+                color: white;
+                text-decoration: none;
+                  font-family: "Cal Sans", sans-serif;
+                  font-weight: 400;
+                  font-style: normal;
+                font-size: 20px;
+                padding: 8px 16px;
+                border: 2px solid white;
+                border-radius: 8px;
+                transition: background-color .18s, color .18s, transform .12s;
+            }
+            a:hover {
+                background-color: white;
+                color: black;
+                transform: translateY(-5px);
+            }
+        }
+         /* ===== EL FOKIN PRIMER CARRUCEL DE UNO OK?===== */
+    .carrusel1 {
+      position: relative;
+      width:100%;
+      height: 600px;
+      overflow: hidden;
+      margin-top: 60px
+    }
+
+    .carrusel1 .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 2s ease-in-out;
+    }
+
+    .carrusel1 .slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .carrusel1 .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .carrusel1 .flecha {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 10;
+      background-color: transparent;
+    }
+
+    .carrusel1 .prev { left: 10px; }
+    .carrusel1 .next { right: 10px; }
+   
+   /* mi bebe con cositas lindas */
+   .imgtienda{
+    
+  margin-left: 30%;
+  width: 40%;
+  height:50% ;
+}
+.PayaShop{
+  height: 60%;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+ 
+   
+}
+   .f1{
+  background-image: url(img/fondo.png) ;
+  background-size: 1000px 500px;
+  background-repeat: cover;
+  height:500px ;
+  width:90%;
+  background-position: 50%; 
+  margin-left: 5%; 
+  margin-right: 5%; 
+
+}
+.carrusel2-bebe {
+  width: calc(270px * 3 + 40px); /* 3 tarjetas + 2 gaps */
+  margin:40px auto;
+  overflow: hidden;
+  position: relative;
+ align-items: center;
+ justify-content: center;     /* centra horizontalmente */
+  align-items: center;         /* centra verticalmente */
+   padding-top: 70px;
+    
+}
+
+.carrusel2-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.45s ease-in-out;
+ z-index: 2000;
+
+}
+
+.carrusel2-container .tarjeta {
+  width: 270px;
+  height: 337.5px;
+  background-color: #ffffff; /* fondo visible uwu */
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flecha2 {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  z-index: 10;
+  border-radius: 10%;
+  background-color: rgb(255, 255, 255);
+border-radius: 50%;
+  
+}
+.imgsp{
+  height: 337.5px;
+  width:270px ;
+  transition: 0.2s;
+}
+.imgsp:hover{
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+
+
+
+/* Flechas ahora sobre las tarjetas dentro del contenedor */
+.carrusel2-bebe .antes2 { margin-left: 5px;
+ }
+.carrusel2-bebe .siguente2 { right: 5px; }
+
+/* Cursos */
+
+.cursos{
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  img{
+    transition: 0.2s;
+  }
+  img:hover{
+      transform: scale(1.2) rotate(-3deg); 
+      transition: transform 0.1s ease-in-out;
+  }
+} 
+.BC{
+  border-radius: 30px;
+  margin-right: 100px;
+  margin-top: 50px;
+  height: 40%;
+  width:40% ;
+  float: left;
+}
+.texto{
+  margin-top: -300px;
+  h1{
+    color: #ff0620;
+    font-size: 50px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
+/* Aqui van las cajitas para poner texto */
+.informacion {
+  align-items: center;
+  display: inline;
+  column-gap: 15px;
+  margin-top: 300px;
+  border: none;
+  p{
+    margin-left: -425px;
+  }
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    height: 20px;
+    width: 300px;
+    margin-left: -425px;
+  }
+}
+.equipo{
+   font-family: "Cal Sans", sans-serif;
+       font-weight: 400;
+      font-style: normal;
+    h1{
+        justify-content: center;
+        text-align: center;
+        font-size: 60px;
+        color: #ff6e8d;
+      }
+  }
+  
+  .fotitos img{ /* AQUI VA TODO SOBRE LAS FOTOS DE PAYASITOS, ES UN MONTON */
+        border-radius: 30px;
+        width: 400px;
+        margin-left: 15%;
+        height: auto;
+  } 
+  .fotitos p{
+     font-family: "Cal Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      font-size: 30px;
+      padding-left: 25%;
+  }
+    .mirka{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+
+    }
+    .mirka .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .mirka:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .armando{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .armando .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .armando:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .bere{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .bere .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .bere:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .alan{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .alan .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .alan:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .paulina{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .paulina .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .paulina:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .sandra{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .sandra .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .sandra:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .grecia{
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+    .grecia .top{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .grecia:hover .top {
+      display: inline;
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out; 
+    }
+footer {
+  background-color: #ff6e8d;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Cal Sans", sans-serif;
+  margin-top: 50px ;
+}
+
+/* Casita de la parte izquierda (logos + redes) */
+.footer-izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;      /* gap = espacio entre los hijos del contenedor, es como un margin pero mas cool  */
+}
+
+/* Sección de los logos */
+.footer-logos {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+     flex-direction: column; 
+    transition: 0.2s;
+
+}
+
+.footer-logos img {
+  display: block;
+  width:13% ;
+  height:13% ;
+  padding-left: 150px;  
+}
+.footer-logos:hover {
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out;
+  
+}
+
+/* Redes sociales (una debajo de otra) */
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -50px;
+  padding-top: -300px;
+}
+
+.footer-redes a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-redes a:hover { /* a de cuenta que si le pasas el puntero las letras cambian de color , aqui lepuedes mover */
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.footer-redes img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Texto de derechos reservados */
+.footer-derecha {
+  align-self: flex-end;
+  font-size: 14px;
+  color: #ffffff;
+}
