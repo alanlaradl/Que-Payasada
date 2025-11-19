@@ -5,47 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Que Payasada - PayaShop</title> 
     <link rel = "icon" href = "img/favicon.png">   <!-- ICONO VA AQUI -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilopayashop.css">
 </head>
-
+<a><div id="PRINCIPIOPAYASHOP"></div></a>
 <body>
 
     <div class="menu"> <!-- MENU VA AQUI -->
-        <a href="#HEADER"> INICIO</a>
+        <a href="#PRINCIPIOPAYASHOP"> INICIO</a>
         <a href="index.html"> PAGINA PRINCIPAL</a>
-        <a href="#SOBRENOSOTROS"> SOBRE NOSOTROS</a>
-        <a href="pagina2.html"> PAYASHOP</a>
         <a href="pagina3.html"> CURSOS </a> 
         <a href="pagina4.html"> IDENTIDAD</a>
-        <a href="#TEAM"> NUESTRO EQUIPO </a>
     </div>
+ 
+        <div id="ICONO" class="ICONO"> <!-- COSA MARAVILLOSA QUE REPRODUCE AUDIO -->
+    <img src="img/quepayasadaLOGOSINFONDO.png" alt="Ícono">
+    <audio id="player" src="img/BOCINA.mp3"></audio>
+  </div>
+  <img id="confettiGif" src="img/confetti.gif" alt="Confeti GIF">
     
+   <script>
+    let isPlaying = false; // Bandera para evitar clics múltiples
+
+    function playAudioAndConfetti() {
+      // Evitar que se ejecute si ya está reproduciendo
+      if (isPlaying) return;
+
+      isPlaying = true;
+      const audio = document.getElementById('player');
+      const gif = document.getElementById('confettiGif');
+      const icono = document.getElementById('ICONO');
+
+      // Deshabilitar clics en el ícono
+      icono.style.pointerEvents = 'none';
+
+      // Reiniciar y reproducir el audio
+      audio.currentTime = 0;
+      audio.play().catch(error => {
+        console.error('Error al reproducir el audio:', error);
+        // Continuar con el GIF incluso si el audio falla
+      });
+
+      // Mostrar el GIF y forzar su recarga para que inicie desde el principio
+      gif.style.display = 'block';
+      gif.src = gif.src.split('?')[0] + '?t=' + new Date().getTime();
+
+      // Duración fija para el GIF (ajusta según la duración real del GIF)
+      const duracionGif = 2500; // Cambia a la duración real de tu GIF en milisegundos (por ejemplo, 5000 para 5 segundos)
+
+      // Ocultar el GIF y rehabilitar el ícono después de la duración
+      setTimeout(() => {
+        gif.style.display = 'none';
+        icono.style.pointerEvents = 'auto';
+        isPlaying = false;
+      }, duracionGif);
+    }
+
+    // Vincular el evento onclick al div
+    document.getElementById('ICONO').onclick = playAudioAndConfetti;
+
+    // Precargar el audio para obtener su duración (opcional)
+    document.getElementById('player').addEventListener('loadedmetadata', () => {
+      console.log('Duración del audio:', document.getElementById('player').duration, 'segundos');
+    });
+  </script>
+  
   <!-- ===== mi bebe  ===== -->
 
 <div id= "TIENDITA" class="PayaShop"> <img class="imgtienda" src="img/Payashop.png" alt=""></div>
-<section class="f1">
+
  
-<div class="carrusel2-bebe">
-   <button class="flecha2 antes2" onclick="moverCarrusel2(-1)">❮</button>  
- 
-  <div class="carrusel2-container" id="carrusel2">
-    <div class="tarjeta"><img class="imgsp" src="img/p1.png" alt=""></div>
-    <div class="tarjeta"><img class="imgsp" src="img/p2.png" alt=""></div>
-    <div class="tarjeta"><img class="imgsp" src="img/p3.png" alt=""></div>
-    <div class="tarjeta"><img class="imgsp" src="img/p4.png" alt=""></div>
-    <div class="tarjeta"><img class="imgsp" src="img/p5.png" alt=""></div>
-    <div class="tarjeta"><img class="imgsp" src="img/p6.png" alt=""></div>
-    <div class="tarjeta"><img class="imgsp" src="img/p7.png" alt=""></div>
-    
+
+  
+  <div class="contenedor-tarjetas">
+    <div class="tarjeta1"><img class="imgsp" src="img/pp1.png" alt=""></div>
+    <div class="tarjeta2"><img class="imgsp" src="img/pp2.png" alt=""></div>
+    <div class="tarjeta3"><img class="imgsp" src="img/pp3.png" alt=""></div>
   </div>
+<div class="contenedor-tarjetas2">
+    <div class="tarjeta"><img class="imgsp" src="img/pp4.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/pp5.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/pp6.png" alt=""></div>
+ </div>
+ <div class="contenedor-tarjetas3">
+    <div class="tarjeta"><img class="imgsp" src="img/pp7.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/pp8.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/pp9.png" alt=""></div>
+ </div>
+<div class="contenedor-tarjetas4">
+    <div class="tarjeta"><img class="imgsp" src="img/pp10.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/pp11.png" alt=""></div>
+    <div class="tarjeta"><img class="imgsp" src="img/pp12.png" alt=""></div>
+ </div>
 
-
-  <button class="flecha2 siguente2" onclick="moverCarrusel2(1)">❯</button>
 </div>
 </section>
 <div class="PayaShop"> <img class="imgtienda" src="img/Payashop abajo.png" alt=""></div>
 
+ <script>
+    let (isPlaying) = false; // Bandera para evitar clics múltiples
 
+    function playAudioAndConfetti() {
+      // Evitar que se ejecute si ya está reproduciendo
+      if (isPlaying) return;
+
+      isPlaying = true;
+      const audio = document.getElementById('player');
+      const gif = document.getElementById('confettiGif');
+      const icono = document.getElementById('ICONO');
+
+      // Deshabilitar clics en el ícono
+      icono.style.pointerEvents = 'none';
+
+      // Reiniciar y reproducir el audio
+      audio.currentTime = 0;
+      audio.play().catch(error => {
+        console.error('Error al reproducir el audio:', error);
+        // Continuar con el GIF incluso si el audio falla
+      });
+
+      // Mostrar el GIF y forzar su recarga para que inicie desde el principio
+      gif.style.display = 'block';
+      gif.src = gif.src.split('?')[0] + '?t=' + new Date().getTime();
+
+      // Duración fija para el GIF (ajusta según la duración real del GIF)
+      const duracionGif = 2500; // Cambia a la duración real de tu GIF en milisegundos (por ejemplo, 5000 para 5 segundos)
+
+      // Ocultar el GIF y rehabilitar el ícono después de la duración
+      setTimeout(() => {
+        gif.style.display = 'none';
+        icono.style.pointerEvents = 'auto';
+        isPlaying = false;
+      }, duracionGif);
+    }
+
+    // Vincular el evento onclick al div
+    document.getElementById('ICONO').onclick = playAudioAndConfetti;
+
+    // Precargar el audio para obtener su duración (opcional)
+    document.getElementById('player').addEventListener('loadedmetadata', () => {
+      console.log('Duración del audio:', document.getElementById('player').duration, 'segundos');
+    });
+  </script>
 
    <footer>
   <div class="footer-izquierda">

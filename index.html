@@ -30,6 +30,13 @@
           <img src="img/balloondog.gif">
         </div>
 
+        <div>
+        <a class="TARJETITA1" href="pagina2.html"> <img  src="img/boton_payashop.png" alt="">  </a>
+        <a class="TARJETITA1" href="pagina3.html"> <img  src="img/boton_eventos.png" alt=""> </a>
+        <a class="TARJETITA1" href="pagina4.html"> <img src="img/boton_identidad.png" alt=""> </a>
+        </div>
+        
+
         </div>
     </section>
 
@@ -85,18 +92,10 @@
     });
   </script>
   
-    <div id="EVENTOS" class="carrusel1" id="carrusel1">
-    <div class="slides">
-      <div class="slide"><img src="img/Asset 1.png" alt=""></div>
-      <div class="slide"><img src="img/Asset 2.png" alt=""></div>
-      <div class="slide"><img src="img/Asset 3.png" alt=""></div>
-    </div>
-    <button class="flecha prev" onclick="moverSlide(-1)">❮</button>
-    <button class="flecha next" onclick="moverSlide(1)">❯</button>
-  </div>
+   
   <!-- ===== mi bebe  ===== -->
 
-<div id= "TIENDITA" class="PayaShop"> <img class="imgtienda" src="img/Payashop.png" alt=""></div>
+<a href="pagina2.html" id= "TIENDITA" class="PayaShop"> <img class="imgtienda" src="img/Payashop.png" alt=""></a>
 <section class="f1">
  
 <div class="carrusel2-bebe">
@@ -117,31 +116,9 @@
   <button class="flecha2 siguente2" onclick="moverCarrusel2(1)">❯</button>
 </div>
 </section>
-<div class="PayaShop"> <img class="imgtienda" src="img/Payashop abajo.png" alt=""></div>
+<div class="PayaShop"> <img class="imgtienda2" src="img/Payashop abajo.png" alt=""></div>
 
-<div id="CURSOS" class="cursos">
-  <img class="BC"  src="img/banner cursos.png" >
-<div class="texto">
-  <h1> CURSO DE CLOWN! </h1>
-  <p> 4 Sesiones, inicia sábado 11 de Octubre </p>
-  <p> Dirigido a jóvenes y adultos por igual! </p>
-  <p> Horario: 11:00AM a 12:30PM </p>
-  <h2> Formulario de Inscripción ↓ </h2>
-  <br> </br>
-</div>
-<div class="informacion">
-  <form>
-    <p> NOMBRE </p>
-    <input type="text">
-  </form>
-   <form>
-    <p> NOMBRE DE PAYASO </p>
-    <input type="text">
-  </form>
-   <form>
-    <p> NUMERO DE PAYASO </p>
-    <input type="text">
-  </form>
+
   </div>
 </div>
 <a id="TEAM"> </a>
@@ -209,17 +186,7 @@
 </footer>
 
      <script>
-    // --- scrip no le entiendo ,pero si le entiendo tu sabes ---
-    let index1 = 0;
-    const slides = document.querySelector(".carrusel1 .slides");
-    const totalSlides = document.querySelectorAll(".carrusel1 .slide").length;
-
-    function moverSlide(n) {
-      index1 = (index1 + n + totalSlides) % totalSlides;
-      slides.style.transform = `translateX(-${index1 * 100}%)`;
-    }
-
-    setInterval(() => moverSlide(1), 3000);
+   
      // --- Carrusel 2 ---
   let index2 = 0;
   const carrusel2 = document.getElementById("carrusel2");
